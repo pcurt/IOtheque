@@ -1,0 +1,20 @@
+query getArticles {
+  posts {
+    nodes {
+      databaseId
+      title
+      slug
+      author {
+        node {
+          name
+        }
+      }
+      featuredImage {
+        node {
+          altText
+          sourceUrl
+        }
+      }
+    }
+  }
+}
