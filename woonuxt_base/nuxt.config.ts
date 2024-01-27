@@ -32,19 +32,16 @@ export default defineNuxtConfig({
       pages.push({
         name: 'product-category-page',
         path: '/product-category/:categorySlug',
-        // file: resolve('./pages/products.vue'),
         file: resolve('./pages/product-category/[slug].vue'),
       });
       pages.push({
         name: 'product-category-page-pager',
         path: '/product-category/:categorySlug/page/:pageNumber',
-        // file: resolve('./pages/products.vue'),
         file: resolve('./pages/product-category/[slug].vue'),
       });
       pages.push({
         name: 'article-page',
         path: '/article/:articleSlug',
-        // file: resolve('./pages/products.vue'),
         file: resolve('./pages/article/[slug].vue'),
       });
       pages.push({
