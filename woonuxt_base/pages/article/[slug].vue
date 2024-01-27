@@ -21,7 +21,6 @@ const mainImage = computed(() => article?.value?.featuredImage?.node?.sourceUrl)
   <main class="container relative py-6 xl:max-w-7xl" v-if="article">
     <BreadcrumbArticle :article="article" class="mb-6" />
     <h1 class="text-4xl">{{ article.title }}</h1>
-    <div class="text-2xl mt-6">Date du publication: {{ new Date(article.date).toLocaleDateString() }}</div>
     <NuxtImg
         :width="imgWidth"
         :height="imgHeight"
