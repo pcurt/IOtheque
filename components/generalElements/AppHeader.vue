@@ -16,12 +16,6 @@ const goToContact = () => {
       </div>
       <MainMenu class="items-center hidden gap-6 text-sm text-gray-500 lg:flex lg:px-4" />
       <div class="flex gap-4 justify-end items-center md:w-[160px] flex-1 ml-auto">
-        <nuxt-link to="https://github.com/pcurt/yocto-build" target="_blank">
-          <Icon name="mdi:github" size="20" />
-        </nuxt-link>
-        <nuxt-link to="https://mapio-docs.readthedocs.io/en/latest/" target="_blank">
-          <Icon name="devicon:readthedocs" size="20" />
-        </nuxt-link>
         <ProductSearch class="hidden sm:inline-flex max-w-[320px] w-[60%]" />
         <SearchTrigger />
         <NuxtLink to="/wishlist" title="Wishlist">
