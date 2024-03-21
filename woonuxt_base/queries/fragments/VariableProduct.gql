@@ -22,6 +22,7 @@ fragment VariableProduct on VariableProduct {
   stockStatus
   totalSales
   stockQuantity
+  lowStockAmount
   attributes {
     nodes {
       name
@@ -36,7 +37,7 @@ fragment VariableProduct on VariableProduct {
       attributeId
     }
   }
-  variations {
+  variations(first: 999) {
     nodes {
       name
       databaseId

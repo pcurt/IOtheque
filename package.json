@@ -32,7 +32,7 @@
     "nuxt-graphql-client": "^0.2.33",
     "nuxt-icon": "^0.6.8",
     "prettier": "^3.2.4",
-    "vue-stripe-js": "^1.0.1",
-    "woonuxt-settings": "^1.0.51"
+    "vue-stripe-js": "^1.0.2",
+    "woonuxt-settings": "^1.0.52"
   }
 }
