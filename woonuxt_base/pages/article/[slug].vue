@@ -13,8 +13,6 @@ articleContent = articleContent?.replace(/<a href=/g, '<a class="text-blue-500 h
 const imgWidth = 600;
 const imgHeight = Math.round(imgWidth * 1.125);
 const mainImage = computed(() => article?.value?.featuredImage?.node?.sourceUrl);
-
-
 </script>
 
 <template>
@@ -22,17 +20,16 @@ const mainImage = computed(() => article?.value?.featuredImage?.node?.sourceUrl)
     <BreadcrumbArticle :article="article" class="mb-6" />
     <h1 class="text-4xl">{{ article.title }}</h1>
     <NuxtImg
-        :width="imgWidth"
-        :height="imgHeight"
-        :src="mainImage || '/images/placeholder.jpg'"
-        :alt="article.title"
-        :title="article.title"
-        fit="outside"
-        format="webp"
-        densities="x1 x2" />
+      :width="imgWidth"
+      :height="imgHeight"
+      :src="mainImage || '/images/placeholder.jpg'"
+      :alt="article.title"
+      :title="article.title"
+      fit="outside"
+      format="webp"
+      densities="x1 x2" />
     <div class="article-content" v-html="articleContent"></div>
   </main>
 </template>
 
-<style lang="postcss" scoped>
-</style>
+<style lang="postcss" scoped></style>

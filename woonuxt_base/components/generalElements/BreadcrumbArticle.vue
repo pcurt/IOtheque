@@ -4,10 +4,7 @@ const { formatURI } = useHelpers();
 
 const { article } = defineProps<{ article: Article }>();
 
-const format = computed(() => [
-  { name: 'Article', slug: '/blog' },
-  { name: article.title },
-]);
+const format = computed(() => [{ name: 'Article', slug: '/blog' }, { name: article.title }]);
 </script>
 
 <template>

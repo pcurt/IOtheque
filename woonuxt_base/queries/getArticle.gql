@@ -6,10 +6,10 @@ query getArticle($slug: ID!) {
     date
     content
     featuredImage {
-        node {
-          altText
-          sourceUrl
-        }
+      node {
+        altText
+        sourceUrl
       }
+    }
   }
 }

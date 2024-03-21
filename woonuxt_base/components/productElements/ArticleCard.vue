@@ -10,7 +10,6 @@ const imgWidth = 220;
 const imgHeight = Math.round(imgWidth * 1.125);
 
 const mainImage = computed(() => node?.featuredImage?.node?.sourceUrl);
-
 </script>
 
 <template>

@@ -1,15 +1,7 @@
 mutation SendEmail($to: String!, $from: String!, $subject: String!, $body: String!, $clientMutationId: String!) {
-   sendEmail(
-     input: {
-       to: $to
-       from: $from
-       subject: $subject
-       body: $body
-       clientMutationId: $clientMutationId
-     }
-   ) {
-     origin
-     sent
-     message
-   }
- }
+  sendEmail(input: { to: $to, from: $from, subject: $subject, body: $body, clientMutationId: $clientMutationId }) {
+    origin
+    sent
+    message
+  }
+}

@@ -21,7 +21,6 @@ export function useArticles() {
     articles.value = allArticles;
 
     return;
-    
   };
 
   return { articles, allArticles, setArticles, updateArticleList };

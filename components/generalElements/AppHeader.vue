@@ -31,13 +31,12 @@ const goToContact = () => {
       </div>
     </Transition>
     <UAlert
-    title="Soyez informé(e) de la sortie de MAPIO !"
-    description="Inscrivez vous via notre formulaire de contact"
-    :id="2"
-    :timeout="0"
-    @click="goToContact()"
-    color="primary"
-    variant="solid"
-  />
+      title="Soyez informé(e) de la sortie de MAPIO !"
+      description="Inscrivez vous via notre formulaire de contact"
+      :id="2"
+      :timeout="0"
+      @click="goToContact()"
+      color="primary"
+      variant="solid" />
   </header>
 </template>
