@@ -106,8 +106,8 @@ watch(
         <div class="grid w-full max-w-2xl gap-8 checkout-form md:flex-1">
           <!-- Customer details -->
           <div>
-            <h2 class="w-full mb-2 text-2xl font-semibold leading-none">Contact Information</h2>
-            <p v-if="!viewer" class="mt-1 text-sm text-gray-500">Already have an account? <a href="/my-account" class="text-primary text-semibold">Log in</a>.</p>
+            <h2 class="w-full mb-2 text-2xl font-semibold leading-none">Information de contact</h2>
+            <p v-if="!viewer" class="mt-1 text-sm text-gray-500">{{ $t('messages.account.hasAccount') }} <a href="/my-account" class="text-primary text-semibold">Log in</a>.</p>
             <div class="w-full mt-4">
               <label for="email">{{ $t('messages.billing.email') }}</label>
               <input
@@ -128,7 +128,7 @@ watch(
               <PasswordInput id="password" class="my-2" v-model="orderInput.password" placeholder="Password" :required="true" />
             </div>
             <div v-if="!viewer" class="flex items-center gap-2 my-2">
-              <label for="creat-account">Create an account?</label>
+              <label for="creat-account">Créer un compte?</label>
               <input id="creat-account" v-model="orderInput.createAccount" type="checkbox" name="creat-account" />
             </div>
           </div>

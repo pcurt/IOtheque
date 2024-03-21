@@ -35,7 +35,7 @@
                   placeholder="johndoe@email.com" />
               </div>
               <div>
-                <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                <label for="subject" class="block text-sm font-medium text-gray-700">Objet</label>
                 <input
                   v-model="contactForm.subject"
                   type="text"
@@ -54,7 +54,7 @@
                   required
                   rows="4"
                   class="mt-1 block w-full px-4 py-3 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Your message"></textarea>
+                  placeholder="Message"></textarea>
               </div>
             </div>
             <div class="bg-white backdrop-blur-sm bg-opacity-75 border-t col-span-full p-4 sticky bottom-0 rounded-b-lg flex justify-center">
