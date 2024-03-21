@@ -93,10 +93,6 @@ const disabledAddToCart = computed(() => !type.value || stockStatus.value === St
             <span class="text-gray-400">{{ $t('messages.shop.availability') }}: </span>
             <StockStatus :status="stockStatus" @updated="mergeLiveStockStatus" />
           </div>
-          <div class="flex items-center gap-2">
-            <span class="text-gray-400">{{ $t('messages.shop.sku') }}: </span>
-            <span>{{ product.sku || 'N/A' }}</span>
-          </div>
         </div>
 
         <div class="mb-8 font-light prose" v-html="product.shortDescription || product.description" />
