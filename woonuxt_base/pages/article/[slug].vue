@@ -6,8 +6,8 @@ const { data } = (await useAsyncGql('getArticle', { slug })) as { data: { value:
 const article = ref<SimpleArticle>(data?.value?.post);
 
 // Replace some wrong balise format for Tailwind CSS
-let articleContent = article?.value?.content?.replace(/<h2 class="wp-block-heading">/g, '<h2 class="text-lg font-semibold md:text-2xl my-8">');
-articleContent = articleContent?.replace(/<ul>/g, '<ul class="list-disc">');
+let articleContent = article?.value?.content?.replace(/<h1 class="wp-block-heading">/g, '<h1 class="text-lg font-semibold md:text-2xl my-8">');
+articleContent = articleContent?.replace(/<h2 class="wp-block-heading">/g, '<h2 class="text-lg font-semibold md:text-2xl my-8">');
 articleContent = articleContent?.replace(/<a href=/g, '<a class="text-blue-500 hover:text-blue-600" href=');
 
 const imgWidth = 600;
