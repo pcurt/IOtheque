@@ -10,7 +10,7 @@
     <NuxtLink to="https://mapio-docs.readthedocs.io/en/latest/">
       <Icon name="devicon:readthedocs" size="20" />
     </NuxtLink>
-    <NuxtLink class="lg:hidden" to="/wishlist" :prefetch="false">Wishlist</NuxtLink>
-    <NuxtLink class="lg:hidden" to="/my-account" :prefetch="false">My Account</NuxtLink>
+    <NuxtLink class="lg:hidden" to="/wishlist" :prefetch="false">Favoris</NuxtLink>
+    <NuxtLink class="lg:hidden" to="/my-account" :prefetch="false">Mon compte</NuxtLink>
   </nav>
 </template>

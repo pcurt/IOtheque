@@ -77,9 +77,9 @@ const sending = ref(false);
 const emailSent = ref(false);
 const formSubmitted = ref(false);
 const buttonText = computed(() => {
-  if (sending.value) return 'Sending...';
-  if (emailSent.value) return 'Email Sent';
-  return 'Send Message';
+  if (sending.value) return 'Envoi...';
+  if (emailSent.value) return 'Message envoyé';
+  return 'Envoyer Message';
 });
 
 const initialFormState = {
