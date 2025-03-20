@@ -1,9 +1,5 @@
 <script setup lang="ts">
 const { isShowingSearch } = useSearching();
-
-const goToContact = () => {
-  router.push(`/contact`);
-};
 </script>
 
 <template>

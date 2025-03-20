@@ -20,26 +20,14 @@ interface ProductAttributeInput {
   attributeValue: string;
 }
 
-interface AddToCartInput {
-  clientMutationId?: string;
-  extraData?: string;
-  productId: number;
-  quantity: number;
-  variation?: ProductAttributeInput[];
-  variationId?: number | null | undefined;
-}
-
-interface MetaDataInput {
-  key: string;
-  value: string;
-  id?: string;
-}
-
-interface CreateAccountInput {
-  password: string;
-  username: string;
-  email: string;
-}
+// interface AddToCartInput {
+//   clientMutationId?: string;
+//   extraData?: string;
+//   productId: number;
+//   quantity: number;
+//   variation?: ProductAttributeInput[];
+//   variationId?: number | null | undefined;
+// }
 
 interface Customer {
   lastName?: string | null;
@@ -56,10 +44,11 @@ interface Address {
   address1?: string | null;
   address2?: string | null;
   city?: string | null;
-  country?: CountriesEnum | null;
+  country?: Array | null;
   email?: string | null;
   firstName?: string | null;
   lastName?: string | null;
+  username?: string | null;
   phone?: string | null;
   postcode?: string | null;
   state?: string | null;
@@ -79,6 +68,7 @@ interface Viewer {
 
 interface ProductCategory {
   databaseId: number;
+  id: string;
   slug: string;
   name: string;
   count: number;
@@ -224,19 +214,9 @@ interface Variation {
 }
 
 interface ProductImage {
-  sourceUrl?: string | null;
-  altText?: string | null;
-  title?: string | null;
-  cartSourceUrl?: string | null;
-}
-
-interface FeaturedImage {
-  sourceUrl?: string | null;
-  altText?: string | null;
-}
-
-interface ArticleAuthor {
-  name?: string | null;
+  sourceUrl?: string | null | undefined;
+  altText?: string | null | undefined;
+  title?: string | null | undefined;
 }
 
 interface CartItem {
@@ -272,6 +252,7 @@ interface ShippingMethodRate {
 
 interface Cart {
   total?: string | null;
+  rawTotal?: string | null;
   subtotal?: string | null;
   totalTax?: string | null;
   discountTotal?: string | null;

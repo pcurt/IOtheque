@@ -19,6 +19,8 @@ fragment SimpleProduct on SimpleProduct {
   image {
     sourceUrl
     cartSourceUrl: sourceUrl(size: THUMBNAIL)
+    producCardSourceUrl: sourceUrl(size: WOOCOMMERCE_THUMBNAIL)
+    databaseId
     altText
     title
   }

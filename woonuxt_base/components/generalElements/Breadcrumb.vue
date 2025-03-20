@@ -8,7 +8,7 @@ const { product } = defineProps<{ product: Product }>();
 const productCategoryPermallink = runtimeConfig?.public?.PRODUCT_CATEGORY_PERMALINK || '/product-category/';
 const primaryCategory = computed(() => product.productCategories?.nodes[0]);
 const format = computed(() => [
-  { name: 'Produits', slug: '/products' },
+  { name: 'Products', slug: '/products' },
   {
     name: primaryCategory.value?.name,
     slug: `${String(productCategoryPermallink)}${primaryCategory.value?.slug}`,

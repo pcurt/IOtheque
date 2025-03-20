@@ -3,9 +3,9 @@ const { data } = await useAsyncGql('getProductCategories');
 const productCategories = data.value.productCategories?.nodes as ProductCategory[];
 
 useHead({
-  title: `Product Categories - WooNuxt`,
+  title: `Categories`,
   meta: [{ name: 'description', content: 'All product categories' }],
-  link: [{ rel: 'canonical', href: 'https://iotheque.com/categories' }],
+  link: [{ rel: 'canonical', href: 'https://v3.woonuxt.com/categories' }],
 });
 </script>
 

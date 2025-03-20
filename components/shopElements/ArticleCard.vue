@@ -45,3 +45,4 @@ const mainImage = computed(() => node?.featuredImage?.node?.sourceUrl);
   }
 }
 </style>
+

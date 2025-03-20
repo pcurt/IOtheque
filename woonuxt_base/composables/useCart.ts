@@ -1,3 +1,5 @@
+import type { AddToCartInput } from '#gql';
+
 /**
  * @name useCart
  * @description A composable that handles the cart in local storage
@@ -23,7 +25,8 @@ export function useCart() {
 
       return cart;
     } catch (error: any) {
-      console.error(error);
+      const errorMessage = error?.gqlErrors?.[0].message;
+      if (errorMessage) console.error(errorMessage);
     }
 
     return null;

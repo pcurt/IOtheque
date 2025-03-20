@@ -1,11 +1,6 @@
 <script setup lang="ts">
 const { formatURI } = useHelpers();
-interface Props {
-  node: ProductCategory;
-}
-
-const { node } = defineProps<Props>();
-const imageSrc = node.image?.sourceUrl || '/images/placeholder.jpg';
+const props = defineProps(['node']);
 </script>
 
 <template>
@@ -17,14 +12,13 @@ const imageSrc = node.image?.sourceUrl || '/images/placeholder.jpg';
       v-if="node.image?.sourceUrl"
       width="250"
       height="300"
-      class="absolute inset-0 object-cover w-full h-full"
-      :src="imageSrc"
+      class="absolute inset-0 object-cover w-full h-full skeleton"
+      :src="node.image?.sourceUrl"
       :alt="node.image?.altText || node.name"
       :title="node.image?.title || node.name"
       loading="lazy"
-      fit="inside"
-      format="webp"
-      densities="x1 x2" />
+      format="wep"
+      fit="outside" />
     <div class="absolute inset-x-0 bottom-0 opacity-50 bg-gradient-to-t from-black to-transparent h-1/2" />
     <span class="relative z-10 mt-auto mb-2 text-sm font-semibold text-white capitalize md:text-base md:mb-4" v-html="node.name" />
   </NuxtLink>

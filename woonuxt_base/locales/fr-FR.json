@@ -16,7 +16,7 @@
       "tax": "Taxe",
       "myDetails": "Mes informations",
       "home": "Accueil",
-      "allProducts": "Boutique",
+      "allProducts": "Tous les produits",
       "contact": "Contact",
       "menu": "Menu",
       "color": "Couleur",
@@ -53,10 +53,14 @@
       "myAccount": "Mon compte",
       "loginToAccount": "Se connecter à votre compte",
       "loggingIn": "Connexion...",
-      "personalInfo": "Informations personnelles"
+      "personalInfo": "Informations personnelles",
+      "updating": "Mise à jour",
+      "updateDetails": "Mettre à jour les détails",
+      "updateSuccess": "Mise à jour réussie",
+      "failed": "Échec de la mise à jour"
     },
     "shop": {
-      "shopByCategory": "Acheter nos produits",
+      "shopByCategory": "Acheter par catégorie",
       "availability": "Disponibilité",
       "inStock": "En stock",
       "outOfStock": "Rupture de stock",

@@ -5,3 +5,4 @@ mutation SendEmail($to: String!, $from: String!, $subject: String!, $body: Strin
     message
   }
 }
+

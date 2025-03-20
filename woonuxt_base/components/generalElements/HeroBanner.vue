@@ -3,13 +3,13 @@
     <NuxtImg
       width="1400"
       height="800"
-      class="object-cover w-full h-[420px] lg:h-[560px] xl:h-[640px]"
+      class="object-cover w-full h-[420px] lg:h-[560px] xl:h-[640px] skeleton"
       src="/images/hero-4.jpg"
       alt="Hero image"
       loading="eager"
-      format="webp"
       fit="outside"
       sizes="sm:100vw lg:1400px"
+      format="wep"
       fetchpriority="high"
       preload />
     <div class="container absolute inset-0 flex flex-col items-start justify-center bg-gradient-to-l from-gray-200 md:bg-none p-8">

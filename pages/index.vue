@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-const router = useRouter();
 const { data } = await useAsyncGql('getProducts', { first: 6 });
 const products = data.value?.products?.nodes || [];
 
-useHead({
+useSeoMeta({
   title: `Home | IOTheque`,
-  meta: [{ name: 'description', content: 'Site et boutique IOTheque' }],
-  link: [{ rel: 'canonical', href: 'https://iotheque.com/' }],
+  ogTitle: `IOTheque`,
+  description: `Site et boutique IOTheque.`,
+  ogDescription: `Site et boutique IOTheque.`,
 });
 </script>
 
