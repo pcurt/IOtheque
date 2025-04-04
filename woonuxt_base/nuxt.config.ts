@@ -4,7 +4,7 @@ const { resolve } = createResolver(import.meta.url);
 export default defineNuxtConfig({
   app: {
     head: {
-      titleTemplate: `%s | ${process.env.SITE_TITLE ?? 'WooNuxt'}`,
+      titleTemplate: `%s`,
       htmlAttrs: { lang: 'en' },
       link: [{ rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
     },

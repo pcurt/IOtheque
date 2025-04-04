@@ -3,7 +3,7 @@ const { data } = await useAsyncGql('getProducts', { first: 6 });
 const products = data.value?.products?.nodes || [];
 
 useSeoMeta({
-  title: `Home | IOTheque`,
+  title: `IOTheque`,
   ogTitle: `IOTheque`,
   description: `Site et boutique IOTheque.`,
   ogDescription: `Site et boutique IOTheque.`,
