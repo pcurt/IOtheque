@@ -3,6 +3,15 @@ export default defineNuxtConfig({
   extends: ['./woonuxt_base'],
   components: [{ path: './components', pathPrefix: false }],
 
+  app: {
+    head: {
+      titleTemplate: `%s`,
+      htmlAttrs: { lang: 'fr' },
+      link: [{ rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
+    },
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
+
   /**
    * Depending on your servers capabilities, you may need to adjust the following settings.
    * It will affect the build time but also increase the reliability of the build process.
