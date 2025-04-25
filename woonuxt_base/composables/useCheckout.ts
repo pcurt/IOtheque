@@ -6,7 +6,7 @@ export function useCheckout() {
       customerNote: '',
       paymentMethod: '',
       shipToDifferentAddress: false,
-      metaData: [{ key: 'order_via', value: 'WooNuxt' }],
+      metaData: [{ key: 'order_via', value: 'IOTheque' }],
     };
   });
 
