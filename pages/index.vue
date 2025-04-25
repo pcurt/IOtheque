@@ -14,7 +14,7 @@ useSeoMeta({
   <main>
     <section class="container my-16">
       <div class="grid justify-center">
-        <h2 class="text-lg font-semibold md:text-2xl">Présentation</h2>
+        <h1 class="text-lg font-semibold md:text-2xl">Présentation</h1>
         <div class="text-lg my-8">
           <p>
             Chez IOtheque nous concevons et développons des produits électroniques durables et innovants. Nous cherchons à créer des produits agréables et faciles à utiliser. C’est
