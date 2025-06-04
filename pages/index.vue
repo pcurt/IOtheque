@@ -39,10 +39,11 @@ function getPreviewImage(item) {
 }
 
 useSeoMeta({
-  title: `IOTheque`,
-  ogTitle: `IOTheque`,
-  description: `Site et boutique IOTheque.`,
-  ogDescription: `Site et boutique IOTheque.`,
+  title: `IOTheque concepteur de produits électroniques innovants`,
+  ogTitle: `IOTheque concepteur de produits électroniques innovants`,
+  description: `IOTheque concepteur et développeur de produits électroniques durables et innovants. Le tout en open source avec une logique d'eco conception.`,
+  ogDescription: `Site et boutique IOTheque, concepteur et développeur de produits électroniques durables et innovants.`,
+  ogImage: "https://back.iotheque.com/wp-content/uploads/2025/06/logo_iotheque@4x.png",
 });
 </script>
 
@@ -50,7 +51,7 @@ useSeoMeta({
   <main>
     <section class="container my-16">
       <div class="grid justify-center">
-        <h1 class="text-lg font-semibold md:text-2xl">Présentation</h1>
+        <h1 class="text-lg font-semibold md:text-2xl">Présentation d'IOTheque</h1>
         <div class="text-lg my-8">
           <p>
             Chez IOtheque nous concevons et développons des produits électroniques durables et innovants. Nous cherchons à créer des produits agréables et faciles à utiliser. C’est
@@ -67,19 +68,23 @@ useSeoMeta({
       <div class="grid gap-6 md:grid-cols-2">
         <div v-for="(item, i) in news" :key="i" class="p-6 bg-white rounded-lg shadow flex gap-4 items-start">
           <a v-if="item.url" :href="item.url" target="_blank" rel="noopener" class="block">
-            <img
+            <NuxtImg
               :src="getPreviewImage(item)"
               alt="miniature actualité"
               class="w-24 h-16 object-cover rounded"
-              loading="lazy"
+              loading="eager"
+              fetchpriority="high"
+              preload
             />
           </a>
-          <img
+          <NuxtImg
             v-else-if="item.image"
             :src="item.image"
             alt="miniature actualité"
             class="w-24 h-16 object-cover rounded"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
+            preload
           />
           <div>
             <h4 class="text-primary font-semibold mb-2">
