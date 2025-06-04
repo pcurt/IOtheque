@@ -13,15 +13,14 @@
           <form @submit.prevent="sendContactMessage">
             <div class="space-y-4">
               <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <label for="name" class="block text-sm font-medium text-gray-700">Nom Prenom</label>
                 <input
                   v-model="contactForm.name"
                   type="text"
                   name="name"
                   id="name"
                   required
-                  class="mt-1 block w-full px-4 py-3 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="John Doe" />
+                  class="mt-1 block w-full px-4 py-3 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
               </div>
               <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
@@ -31,8 +30,7 @@
                   name="email"
                   id="email"
                   required
-                  class="mt-1 block w-full px-4 py-3 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="johndoe@email.com" />
+                  class="mt-1 block w-full px-4 py-3 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"/>
               </div>
               <div>
                 <label for="subject" class="block text-sm font-medium text-gray-700">Objet</label>
@@ -42,8 +40,7 @@
                   name="subject"
                   id="subject"
                   required
-                  class="mt-1 block w-full px-4 py-3 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Subject" />
+                  class="mt-1 block w-full px-4 py-3 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"/>
               </div>
               <div>
                 <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
@@ -53,8 +50,8 @@
                   id="message"
                   required
                   rows="4"
-                  class="mt-1 block w-full px-4 py-3 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Message"></textarea>
+                  class="mt-1 block w-full px-4 py-3 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                </textarea>
               </div>
             </div>
             <div class="bg-white backdrop-blur-sm bg-opacity-75 border-t col-span-full p-4 sticky bottom-0 rounded-b-lg flex justify-center">
