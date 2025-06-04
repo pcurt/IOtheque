@@ -2,6 +2,42 @@
 const { data } = await useAsyncGql('getProducts', { first: 6 });
 const products = data.value?.products?.nodes || [];
 
+const news = [
+  {
+    title: "Le site maison-et-domotique.com parle de Mapio",
+    date: "02/06/2024",
+    url: "https://www.maison-et-domotique.com/162245-mapio-home-assistant-dans-tableau-electrique/"
+  },
+  {
+    title: "Le site goodtech.info parle de Mapio",
+    date: "30/05/2024",
+    url: "https://goodtech.info/mapio-box-domotique-multimedia/"
+  },
+  {
+    title: "Le site programmez.com parle de Mapio",
+    date: "30/05/2024",
+    url: "https://www.programmez.com/actualites/mapio-une-box-domotique-open-source-sur-ulule-37753"
+  },
+  {
+    title: "Lancement de la campagne ulule de Mapio",
+    date: "28/05/2024",
+    content: "Notre premier produit Mapio est disponible en précommande !",
+    url: "https://fr.ulule.com/mapio-box-domotique-multimedia"
+  },
+  {
+    title: "Le site iGenerarion.fr parle de Mapio",
+    date: "28/05/2024",
+    url: "https://www.igen.fr/domotique/2025/05/mapio-gere-home-assistant-et-dautres-services-de-votre-choix-depuis-le-tableau-electrique-150171"
+  }
+];
+
+function getPreviewImage(item) {
+  if (item.image) return item.image;
+  if (item.url)
+    return `https://api.microlink.io/?url=${encodeURIComponent(item.url)}&screenshot=false&meta=true&embed=image.url`;
+  return '';
+}
+
 useSeoMeta({
   title: `IOTheque`,
   ogTitle: `IOTheque`,
@@ -25,6 +61,38 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- Section Actualité -->
+    <section class="container my-16">
+      <h2 class="text-lg font-semibold md:text-2xl mb-6">Actualités</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div v-for="(item, i) in news" :key="i" class="p-6 bg-white rounded-lg shadow flex gap-4 items-start">
+          <a v-if="item.url" :href="item.url" target="_blank" rel="noopener" class="block">
+            <img
+              :src="getPreviewImage(item)"
+              alt="miniature actualité"
+              class="w-24 h-16 object-cover rounded"
+              loading="lazy"
+            />
+          </a>
+          <img
+            v-else-if="item.image"
+            :src="item.image"
+            alt="miniature actualité"
+            class="w-24 h-16 object-cover rounded"
+            loading="lazy"
+          />
+          <div>
+            <h4 class="text-primary font-semibold mb-2">
+              <a v-if="item.url" :href="item.url" target="_blank" rel="noopener" class="hover:underline">{{ item.title }}</a>
+              <span v-else>{{ item.title }}</span>
+            </h4>
+            <div class="text-xs text-gray-500 mb-2">{{ item.date }}</div>
+            <div>{{ item.content }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="container grid gap-4 my-24 md:grid-cols-2">
       <div class="flex items-center gap-8 p-8 bg-white rounded-lg">
         <Icon name="icons8:idea" size="200" />
@@ -40,14 +108,33 @@ useSeoMeta({
           <p>L’écologie guide nos choix techniques tout au long du développement : fournisseurs européens, assemblage en France, produits multifonctions</p>
         </div>
       </div>
-      <div class="flex items-center gap-8 p-8 bg-white rounded-lg">
-        <Icon name="pepicons-pop:question" size="200" />
-        <div>
-          <h3 class="text-xl font-semibold my-4">Qui sommes-nous</h3>
+      <div class="flex flex-col gap-8 p-8 bg-white rounded-lg">
+        <h3 class="text-xl font-semibold my-4">Qui sommes-nous</h3>
+        <div class="mt-8">
           <p>
             Nous sommes Pierrick et Thibaud, 2 ingénieurs passionnés du monde de l’électronique et de l’embarqué, et avons créé IOTheque en 2024. C’est plus précisément le secteur
             de la domotique qui nous a rapproché, et nous a donné envie de créer la société en créant un premier produit : Mapio.
           </p>
+        </div>
+        <div class="flex flex-col gap-8">
+          <!-- Pierrick -->
+          <div class="flex items-center gap-6">
+            <img src="/images/pierrick.png" alt="Pierrick" class="w-40 h-40 rounded-full object-cover border-2 border-primary" />
+            <div class="text-left">
+              <div class="font-semibold">Pierrick</div>
+              <div><span class="font-semibold">Rôle :</span> Président</div>
+              <div><span class="font-semibold">Compétences :</span> Développement embarqué</div>
+            </div>
+          </div>
+          <!-- Thibaud -->
+          <div class="flex items-center gap-6">
+            <img src="/images/thibaud.png" alt="Thibaud" class="w-40 h-40 rounded-full object-cover border-2 border-primary" />
+            <div class="text-left">
+              <div class="font-semibold">Thibaud</div>
+              <div><span class="font-semibold">Rôle :</span> Directeur Général</div>
+              <div><span class="font-semibold">Compétences :</span> Conception électronique</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
