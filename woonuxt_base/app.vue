@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ParsedContent } from '@nuxt/content'
 const route = useRoute();
 const { isShowingCart, toggleCart } = useCart();
 const { isShowingMobileMenu, toggleMobileMenu } = useHelpers();

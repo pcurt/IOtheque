@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   extends: ['./woonuxt_base'],
   components: [{ path: './components', pathPrefix: false }],
 
+  modules: [
+    '@nuxt/content',
+    '@nuxt/image',
+  ],
+
   app: {
     head: {
       titleTemplate: `%s`,
